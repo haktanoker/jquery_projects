@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .title{
+            display: flex;
+            background-color: gray;
+            align-items: center;
+            justify-content: space-between;
+            padding: 7px;
+        }
+        .menu p{
+            background-color: lightgray;
+            display: none;
+            padding: 5px;
+        }
+        .menu{
+            padding: 5px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="menu">
+            <div class="title">
+                <h3>Question 1</h3>
+                <i class="fa-solid fa-minus"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur inventore magni sunt quam, dolor
+                mollitia sit repellat repudiandae cum consequatur quibusdam expedita et placeat itaque aspernatur
+                quaerat natus iure nostrum.</p>
+        </div>
+        <div class="menu">
+            <div class="title">
+                <h3>Question 1</h3>
+                <i class="fa-solid fa-minus"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur inventore magni sunt quam, dolor
+                mollitia sit repellat repudiandae cum consequatur quibusdam expedita et placeat itaque aspernatur
+                quaerat natus iure nostrum.</p>
+        </div>
+        <div class="menu">
+            <div class="title">
+                <h3>Question 1</h3>
+                <i class="fa-solid fa-minus"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur inventore magni sunt quam, dolor
+                mollitia sit repellat repudiandae cum consequatur quibusdam expedita et placeat itaque aspernatur
+                quaerat natus iure nostrum.</p>
+        </div>
+
+    </div>
+
+    <script>
+        $(".title").click(function (e) {
+            $(this).next("p").slideToggle("slow");
+            $(this).find("i").toggleClass("fa-minus fa-plus");
+        });
+    </script>
+
+</body>
+
+</html>
