@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            gap: 5px;
+        }
+        ul li{
+            list-style-type: none;
+            padding: 10px;
+            transition: all .2s ease-in-out;
+        }
+        ul li a{
+            font-size: 2.5rem;
+            text-decoration: none;
+            color: white;
+            transition: all .2s ease-in-out;
+        }
+        ul li:hover{
+            background-color: lightgray;
+        }
+        ul li:hover a{
+            color: black;
+        }
+        ul li.active{
+            background-color: white;
+        }
+        ul li.active a{
+            color: red;
+        }
+    </style>
+    <div class="container">
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
+    </div>    
+
+    <script>
+        $(function(){
+            var tags = document.querySelectorAll("li");
+            $("li").click(function(){
+                tags.forEach(tag => {
+                    tag.classList.remove("active");
+                });
+                $(this).addClass("active");
+            })
+        })
+    </script>
+</body>
+</html>
